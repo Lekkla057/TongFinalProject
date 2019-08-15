@@ -124,9 +124,10 @@
                     <label for="">ที่อยู่</label>
                     <textarea class="form-control" rows="5" id="address"></textarea>
                 </div>
-                <button class="btn" onclick="editshop()">
-                    Notification <span class="badge badge-primary" id="edit">edit</span>
-                </button>
+                
+                    <center>   <a href="#" class="btn btn-primary" id="edit"onclick="editshop()">บันทึก</a></center> 
+                   
+                
             </div>
             <div class="tab-pane" id="tab2">
 
@@ -164,7 +165,10 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <h4 class="modal-title"><span class="event-icon"></span><span class="event-title"></span></h4>
+              <h4 class="modal-title">
+                  <span class="event-icon"></span>
+                  <span class="event-title"></span>
+                </h4>
               <div class="event-body"></div>
             </div>
             <div class="modal-footer">
@@ -414,6 +418,7 @@
                 email = user.email
                 uid = user.uid
                 showdetailshop()
+                
                 // ...
             } else {
                 // User is signed out.
@@ -434,6 +439,10 @@
             else if (e.currentTarget.hash == "#tab3") {
 
 checkbank();
+}
+else if (e.currentTarget.hash == "#tab4") {
+
+tong();
 }
         });
         // read hash from page load and change tab
